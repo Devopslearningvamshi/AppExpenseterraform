@@ -1,5 +1,5 @@
 module "frontend"{
-    source = "Devopslearningvamshi/AppExpenseterraform/pipelines/modules/apps"
+    source = "./Devopslearningvamshi/AppExpenseterraform/pipelines/modules/apps"
     instance_type = var.instance_type
     compenent = "frontend"
     ssh_user = var.ssh_user
