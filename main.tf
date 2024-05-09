@@ -1,4 +1,4 @@
-module "frontend"{
+module "frontend" {
     source = "./modules/apps"
     instance_type = var.instance_type
     compenent = "frontend"
