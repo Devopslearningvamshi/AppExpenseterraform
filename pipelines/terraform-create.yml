@@ -18,6 +18,6 @@ pipelines:
           jobs:
             terraform-apply:
               tasks:
-                 - exec: {command: terraform, arguments: [ "init", "-backend-config=$env-env/state.tfvars" ], run_if: passed}
-                 - exec: {command: terraform, arguments: [ "apply", "-var-file=$env-env/main.tfvars", "-auto-approve" ], run_if: passed}
+                 - exec: {command: terraform, arguments: [ "init", "-backend-config=dev-env/state.tfvars" ], run_if: passed}
+                 - exec: {command: terraform, arguments: [ "apply", "-var-file=prod-env/main.tfvars", "-auto-approve" ], run_if: passed}
                                            
