@@ -20,14 +20,14 @@ resource "null_resource" "ansible"{
 
     inline = [
         "sudo pip3.11 install ansible",
-        "ansible-playbook -i localhost , -U https://github.com/Devopslearningvamshi/gocd-expenseapp expense.yml -e env=${var.env} -e role_name= ${var.compenent}"
+        "ansible-playbook -i localhost , -U https://github.com/Devopslearningvamshi/gocd-expenseapp expense.yml -e env=${var.env} -e role_name= ${var.component}"
     ]
     
     }
 }
 
 resource "aws_route53_record" "record" {
-    name = "${var.compenent}-${var.env}"
+    name = "${var.component}-${var.env}"
     type = "A"
     zone_id = var.zone_id
     records = [aws.instance.instance.private_ip]
