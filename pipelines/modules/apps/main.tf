@@ -4,7 +4,7 @@ resource "aws_instance" "instance"{
     vpc_security_group_ids = [data.aws_secutiy_group.selected.id]
 
 tags = {
-    Name = var.compenent
+    Name = var.component
 }
 }
 resource "null_resource" "ansible"{

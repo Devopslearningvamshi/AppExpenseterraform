@@ -1,7 +1,7 @@
 module "frontend" {
     source = "./modules/apps"
     instance_type = var.instance_type
-    compenent = "frontend"
+    component = "frontend"
     ssh_user = var.ssh_user
     ssh_pass = var.ssh_pass
     env      = var.env
