@@ -11,11 +11,11 @@ resource "null_resource" "ansible" {
   
     provisioner "remote-exec" {
 
-    connection {
-      type     = "ssh"
-      user     = var.ssh_user
-      password = var.ssh_pass
-      host     = aws_instance.instance.public_ip
+        connection {
+          type     = "ssh"
+          user     = var.ssh_user
+          password = var.ssh_pass
+          host     = aws_instance.instance.public_ip
     }
 
     inline = [
