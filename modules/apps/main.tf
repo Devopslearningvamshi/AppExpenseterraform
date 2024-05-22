@@ -9,7 +9,7 @@ tags = {
 }
 resource "null_resource" "ansible" {
   
-      provisioner "remote-exec" {
+    provisioner "remote-exec" {
 
     connection {
       type     = "ssh"
