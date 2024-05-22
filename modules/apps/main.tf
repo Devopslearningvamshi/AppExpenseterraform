@@ -5,10 +5,9 @@ resource "aws_instance" "instance"{
 
 tags = {
     Name = var.component
+    }
 }
-}
-resource "null_resource" "ansible"{
-
+resource "null_resource" "ansible" {
     provisioner "remote-exec" {
 
     connection {
