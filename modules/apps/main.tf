@@ -23,7 +23,6 @@ resource "null_resource" "ansible" {
         "ansible-playbook -i localhost, -U https://github.com/Devopslearningvamshi/gocd-expenseapp expense.yml -e env=${var.env} -e role_name=${var.component}"
     ]
   }
-
 }
 
 resource "aws_route53_record" "record" {
